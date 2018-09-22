@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function isInteger(obj){
+            return obj%1 === 0;
+        }
+
+        var price = 56, count, totalPrice;//定义单价、杯数和总价
+        while(1){
+            count = prompt(price+"元一杯，请问您要来多少杯？");
+            if(isNaN(count)){
+                alert("请输入一个数字！")
+            }
+            else{
+                if(isInteger(count)){
+                    if(count%2==0){
+                        totalPrice = count*price*3/4;
+                    }
+                    else{
+                        totalPrice = count*price*3/4+price*0.25;
+                    }
+                    document.write("总价钱为"+totalPrice);
+                    break;
+                }
+                else{
+                    alert("需要输入整数！");
+                }
+            }
+        }
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
